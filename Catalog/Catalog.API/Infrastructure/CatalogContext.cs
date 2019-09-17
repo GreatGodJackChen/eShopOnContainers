@@ -28,7 +28,7 @@
         public CatalogContext CreateDbContext(string[] args)
         {
             var optionsBuilder =  new DbContextOptionsBuilder<CatalogContext>()
-                .UseSqlServer("Server=.;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;Integrated Security=true");
+                .UseSqlServer("Server=.;Database=CatalogDb;User Id=sa;Password=sa_112212;");
 
             return new CatalogContext(optionsBuilder.Options);
         }
